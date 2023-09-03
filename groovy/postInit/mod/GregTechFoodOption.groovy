@@ -1,4 +1,11 @@
-import static globals.Globals.*
+MIXER.recipeBuilder()
+        .fluidInputs(fluid('gtfo_stearin') * 1000)
+        .fluidInputs(fluid('water') * 1000)
+        .fluidInputs(fluid('sodium_hydroxide_solution') * 1000)
+        .fluidOutputs(fluid('gtfo_sodium_stearate') * 3000)
+        .duration(60)
+        .EUt(120)
+        .buildAndRegister()import static globals.Globals.*
 
 import gregtech.api.recipes.ModHandler;
 import gregtech.api.unification.material.Materials;
@@ -352,10 +359,9 @@ MIXER.recipeBuilder()
         .buildAndRegister()
 
 MIXER.recipeBuilder()
-        .circuitMeta(1)
-        .inputs(ore('dustSodiumHydroxide') * 3)
         .fluidInputs(fluid('gtfo_stearin') * 1000)
-        .fluidInputs(fluid('water') * 2000)
+        .fluidInputs(fluid('water') * 1000)
+        .fluidInputs(fluid('sodium_hydroxide_solution') * 1000)
         .fluidOutputs(fluid('gtfo_sodium_stearate') * 3000)
         .duration(60)
         .EUt(120)
